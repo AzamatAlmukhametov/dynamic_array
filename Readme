@@ -1,0 +1,17 @@
+custom dynamic array
+
+dependencies
+    c++ 20
+    cmake 2.8
+    for test: libgtest-dev
+
+mkdir build
+cd build
+cmake ..
+make
+./main
+
+valgrind --leak-check=full \
+         --show-leak-kinds=all \
+         --track-origins=yes \
+         ./main
